@@ -3,7 +3,7 @@
 ### macOS Configuration
 Run the following to configure macOS from scratch...
 ```
-bash <(curl -fsSL https://raw.githubusercontent.com/jldeen/dotfiles/mac/configure.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/paalr/dotfiles/mac/configure.sh)
 ```
 
 It should go without saying, you should never run a script on your system without reading it to understand what changes it will make to your system. My scripts and code samples are no exception to the rule.
@@ -63,7 +63,7 @@ There are two "master" branches here: WSL and MacOS; there are two "dev" branche
 Run this:
 
 ```sh
-git clone https://github.com/jldeen/dotfiles.git ~/.dotfiles
+git clone https://github.com/paalr/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
