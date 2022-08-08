@@ -90,7 +90,7 @@ ohmyzshPluginInstall () {
     if [ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
         info 'zsh-autosuggestions already installed'
     else
-        git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions && success 'zsh-autosuggestions installed'
+        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions && success 'zsh-autosuggestions installed'
     fi
     if [ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
         info 'zsh-syntax-highlighting already installed'
