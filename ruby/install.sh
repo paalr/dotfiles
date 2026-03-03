@@ -8,8 +8,12 @@ then
   brew install rbenv > /tmp/rbenv-install.log
 fi
 
+# Get the dotfiles directory (parent of ruby/)
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
+
 # Get the Ruby version from .ruby-version file
-RUBY_VERSION=$(cat $HOME/.dotfiles/.ruby-version)
+RUBY_VERSION=$(cat $DOTFILES_ROOT/.ruby-version)
 
 # Check if the specified Ruby version is installed
 if ! rbenv versions | grep -q "$RUBY_VERSION"; then
