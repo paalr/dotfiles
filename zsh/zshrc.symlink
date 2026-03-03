@@ -158,8 +158,16 @@ export PATH=$PATH:$MONGO_PATH/bin
 #---- End Export ----
 
 #---- Source ----
+# Initialize rbenv
+if command -v rbenv > /dev/null; then
+  eval "$(rbenv init - zsh)"
+fi
+
 [ -f ~/bin/fubectl.source ] && source ~/bin/fubectl.source
 source <(kubectl completion zsh)
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source colorls tab completion if colorls is installed
+if command -v colorls > /dev/null; then
+  source $(dirname $(gem which colorls))/tab_complete.sh
+fi
 #---- End Source ----
 #---- END CUSTOM ----
