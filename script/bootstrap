@@ -283,6 +283,12 @@ then
   if sh ruby/install.sh | while read -r data; do info "$data"; done
   then
     success "Ruby installed"
+    # Initialize rbenv in current shell
+    if (( $+commands[rbenv] ))
+    then
+      eval "$(rbenv init -)"
+      info "rbenv initialized, now using Ruby $(ruby -v | awk '{print $2}')"
+    fi
   else
     fail "error installing Ruby"
   fi
