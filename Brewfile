@@ -30,7 +30,6 @@ brew 'terraform'
 brew 'watch'
 brew 'wget'
 brew 'yarn'
-brew 'youtube-dl'
 
 cask 'google-chrome'
 cask 'microsoft-edge'
