@@ -197,7 +197,8 @@ jd_Symlinks () {
 
  jdcolors () {
    # colorls setup
-   sudo gem install colorls && success 'ls colors have been configured'
+   # Install colorls without sudo (uses rbenv-managed Ruby)
+   gem install colorls && success 'ls colors have been configured'
  }
 
 jdcrontab () {
@@ -273,6 +274,19 @@ jdconfigFix () {
 }
 
 jldeenMods
+
+# Install Ruby before colorls
+if [ "$(uname -s)" == "Darwin" ]
+then
+  info "installing Ruby"
+  if sh ruby/install.sh | while read -r data; do info "$data"; done
+  then
+    success "Ruby installed"
+  else
+    fail "error installing Ruby"
+  fi
+fi
+
 jd_Symlinks
 jdcolors
 #jdcrontab
