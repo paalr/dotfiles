@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 
+brew "bitwarden-cli"
 brew 'ack'
 brew 'azure-cli'
 brew 'bash-completion'
@@ -35,7 +36,7 @@ cask 'google-chrome'
 cask 'microsoft-edge'
 cask 'handbrake'
 cask 'iterm2'
-cask 'lastpass'
 cask 'spotify'
 cask 'visual-studio-code'
 cask 'vlc'
+cask "bitwarden"
