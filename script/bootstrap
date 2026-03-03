@@ -284,7 +284,7 @@ then
   then
     success "Ruby installed"
     # Initialize rbenv in current shell
-    if (( $+commands[rbenv] ))
+    if command -v rbenv > /dev/null
     then
       eval "$(rbenv init -)"
       info "rbenv initialized, now using Ruby $(ruby -v | awk '{print $2}')"
